@@ -1,3 +1,5 @@
+-- -- https://projecteuler.net/problem=8
+
 module P8(findMaxProduct) where
 import Data.Char (digitToInt)
 

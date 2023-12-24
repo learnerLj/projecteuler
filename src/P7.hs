@@ -1,3 +1,5 @@
+-- -- https://projecteuler.net/problem=7
+
 module P7 where
 import Criterion.Main
 import Data.List (foldl')

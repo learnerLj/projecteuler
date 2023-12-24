@@ -1,3 +1,5 @@
+-- https://projecteuler.net/problem=3
+
 {-# LANGUAGE NumericUnderscores #-}
 
 module P3 (largestPrimeFactor) where

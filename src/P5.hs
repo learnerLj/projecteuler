@@ -1,3 +1,5 @@
+-- -- https://projecteuler.net/problem=5
+
 module P5 (lcmRangeImproved) where
 
 import Criterion.Main

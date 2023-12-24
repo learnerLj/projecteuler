@@ -1,3 +1,5 @@
+-- -- https://projecteuler.net/problem=9
+
 module P9 () where
 
 findPythagoreanTriplet :: (Num p, Ord p) => p -> Maybe (p, p, p)

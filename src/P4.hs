@@ -1,3 +1,5 @@
+-- https://projecteuler.net/problem=4
+
 module P4 (largestPalindromeProduct) where
 isPalindrome :: Int -> Bool
 isPalindrome n = n == reverseNum n

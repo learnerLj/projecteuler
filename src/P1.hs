@@ -1,3 +1,5 @@
+-- -- https://projecteuler.net/problem=1
+
 module P1(sumOfMultiples) where
 
 sumOfMultiples :: (Integral a) => a -> a
