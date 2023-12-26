@@ -1,6 +1,8 @@
 module P12() where
 import Data.List (group)
 
+-- https://projecteuler.net/problem=12
+
 primeFactors :: Integer -> [(Integer, Integer)]
 primeFactors n =primeFactors' n primes
     where
