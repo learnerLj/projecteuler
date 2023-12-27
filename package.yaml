@@ -23,6 +23,7 @@ dependencies:
 - base >= 4.7 && < 5
 - deepseq
 - criterion
+- containers
 
 ghc-options:
 - -Wall
@@ -48,6 +49,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - projecteuler
+    - containers
     
 
 tests:
