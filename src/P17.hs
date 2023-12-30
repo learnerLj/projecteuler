@@ -19,16 +19,13 @@ triangle =
     , [04, 62, 98, 27, 23, 09, 70, 98, 73, 93, 38, 53, 60, 04, 23]
     ]
 
-
 maxPathSum :: [[Int]] -> Int
 maxPathSum [] = 0
 maxPathSum tri = head $ foldr1 step tri
   where
     step [] _ = []
     step _ [] = []
-    step lastRow@(x:xs) nextRow@(y:ys) = (x + max y (head ys)) : step xs ys
-
-
+    step lastRow@(x : xs) nextRow@(y : ys) = (x + max y (head ys)) : step xs ys
 
 main :: IO ()
 main = print $ maxPathSum triangle

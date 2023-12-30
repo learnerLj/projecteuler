@@ -1,6 +1,6 @@
 -- -- https://projecteuler.net/problem=5
 
-module P5 (lcmRangeImproved) where
+module P5 where
 
 import Criterion.Main
 import Data.List (foldl')
@@ -33,16 +33,16 @@ primes = sieve [2 ..]
 
 main :: IO ()
 main = do
-  defaultMain
-    [ bgroup "lcmRange" [bench "200000" $ nf lcmRange 200000],
-      bgroup
-        "lcmRangeImproved"
-        [ bench "200000" $ nf lcmRangeImproved 200000
-        ],
-      bgroup
-        "lcmRangeImproved2"
-        [ bench "200000" $ nf lcmRangeImproved2 200000
+    defaultMain
+        [ bgroup "lcmRange" [bench "200000" $ nf lcmRange 200000]
+        , bgroup
+            "lcmRangeImproved"
+            [ bench "200000" $ nf lcmRangeImproved 200000
+            ]
+        , bgroup
+            "lcmRangeImproved2"
+            [ bench "200000" $ nf lcmRangeImproved2 200000
+            ]
         ]
-    ]
 
-  print $ lcmRangeImproved 20
+    print $ lcmRangeImproved 20
