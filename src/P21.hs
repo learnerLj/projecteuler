@@ -1,4 +1,4 @@
-module P21 where
+module P21 (sumAcicable, sumAcicable2) where
 
 import Data.List (group)
 
@@ -25,13 +25,15 @@ sumAcicable2 num = sum $ acicable (num - 1)
     mydup (x : xs) = if x == head xs then mydup xs else x : mydup xs
 
 primeFactors :: (Integral a) => a -> [a]
-primeFactors m = primeFactors' m primes
+primeFactors n = primeFactors' n primes
   where
     primeFactors' 1 _ = []
+    primeFactors' _ [] = []
     primeFactors' m (p : xs)
       | m `mod` p == 0 = p : primeFactors' (m `div` p) (p : xs)
       | otherwise = primeFactors' m xs
     primes = sieve [2 ..]
+    sieve [] = []
     sieve (p : xs) = p : sieve [x | x <- xs, x `mod` p /= 0]
 
 main = print $ sumAcicable 10000
