@@ -36,6 +36,8 @@ library
       P18
       P2
       P21
+      P23
+      P24
       P3
       P4
       P5
@@ -50,10 +52,12 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      array
+    , base >=4.7 && <5
     , containers
     , criterion
     , deepseq
+    , mtl
   default-language: Haskell2010
 
 executable projecteuler-exe
@@ -66,10 +70,12 @@ executable projecteuler-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      array
+    , base >=4.7 && <5
     , containers
     , criterion
     , deepseq
+    , mtl
     , projecteuler
   default-language: Haskell2010
 
@@ -84,10 +90,12 @@ test-suite projecteuler-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      array
+    , base >=4.7 && <5
     , containers
     , criterion
     , deepseq
     , hspec
+    , mtl
     , projecteuler
   default-language: Haskell2010
